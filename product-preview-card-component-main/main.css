@@ -1,0 +1,117 @@
+:root {
+    /* primary */
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    /* neutral */
+    --dark-blue: hsl(212, 21%, 14%);
+    --gray-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+    --preview-image: url("./images/image-product-mobile.jpg");
+    /* font */
+    --montserat-500: 500 100% Montserat;
+    --montserat-700: 700 100% Montserat;
+    --faunces-700: 700 100% Faunces;
+}
+
+@media (min-width:992px) {
+    :root {
+        --preview-image: url("./images/image-product-desktop.jpg");
+    }
+}
+
+body {
+    size: 14px;
+    background-color: var(--cream);
+    padding: 0.5rem;
+}
+
+.attribution {
+    font-size: smaller;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: var(--white);
+    border-radius: 0.7rem;
+    margin: 1rem 0rem;
+}
+
+.card::before {
+    content: "";
+    background: var(--preview-image);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 16rem;
+    border-radius: 0.7rem 0.7rem 0 0;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.price-original {
+    text-decoration: line-through;
+    vertical-align: super;
+    padding: 0 1rem;
+    font-size: smaller;
+}
+
+.price-discounted {
+    font: var(--montserat-700);
+    color: var(--dark-cyan);
+    font-size: xx-large;
+}
+
+.card-tag {
+    color: var(--gray-blue);
+    font: var(--montserat-500);
+    letter-spacing: 0.2rem;
+}
+
+.card-title {
+    font: var(--faunces-700);
+    font-size: xx-large;
+    padding: 1rem 0;
+    line-height: 2rem;
+}
+
+.card-description {
+    font: var(--montserat-500);
+    color: var(--gray-blue);
+    font-size: larger;
+    line-height: 1.6rem;
+}
+
+.prices {
+    padding: 1rem 0;
+}
+
+.icon-cart {
+    content: "";
+    background: url("./images/icon-cart.svg");
+    background-size: 1.2rem 1.2rem;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-left: -2rem;
+}
+
+.cart-button {
+    background-color: var(--dark-cyan);
+    border-radius: 0.8rem;
+    text-align: center;
+    width: 100%;
+    color: var(--white);
+    height: 3.5rem;
+    font: var(--montserat-700);
+}
+
